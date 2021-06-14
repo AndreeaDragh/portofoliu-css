@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Queries</title>
+    <style>
+                .row{
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .row::after{
+            content: '';
+            display: block;
+            clear: left;
+        }
+        .column{
+            float: left;
+            width: 16.666%; /*am impartit 100% la 6 pentru ca avem 6 coloane*/ 
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .box{
+            height: 144px;
+            background-color: rgb(145, 36, 36);
+        } 
+        @media screen and (max-width:1024px) {         /*cu media at-rule determinam modul de afisaj al box-urilor in functie de dimensiunea campului vizual 6col/3col/2col/1col*/
+            .column{
+                width: 33.33%;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .column{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width:414px) {
+            .column{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+    </div>  
+</body>
+</html>

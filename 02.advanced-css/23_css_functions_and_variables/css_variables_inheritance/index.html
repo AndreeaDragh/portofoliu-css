@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Inheritance</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        #box-2{
+            --text-color:blue;
+        }
+        #box-3{
+            --text-color: red;
+        }
+        #box-1{
+            color:var(--text-color, gray);
+        }
+        #box-2{
+            color:var(--text-color);
+        }
+        #box-3{
+            color:var(--text-color);
+        }
+        #box-4{
+            color:var(--text-color);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box-1">
+        I am box 1.
+        <div id="box-2">
+            I am box 2.
+            <div id="box-3">I am box 3.</div>
+            <div id="box-4">I am box 4.</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- EXPLICATIE!
+    I am box 1 este de culoare neagra pentru ca am definit culori implicite doar pe box2 si box3
+    I am box 2/3 are culori definite in css
+    I am box 4, deoarece nu i s-a definit nimic in cod, va prelua culoarea parintelui sau, adica box-2
+    -am pus gray la box-1 ca o valoare implicita in caz ca nu i se ofera nimic in cod-->

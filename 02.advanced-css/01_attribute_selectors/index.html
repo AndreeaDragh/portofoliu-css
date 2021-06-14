@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute selectors</title>
+    <style>
+        .some-class{
+            width: 400px;
+            height: 300px;
+            background-color: red;
+        }
+        /* .some-class merge identic si cu comentariul de mai jos:
+        #some-id{
+            width: 400px;
+            height: 300px;
+            background-color: red;
+        }*/
+
+        a[target] {                 /*aici cauta dupa toate elementele care contin target*/
+            color: green;
+        }
+        a[target="self"] {          /*aici cauta dupa toate elementele cu target a caror valoare e self*/
+            color:purple
+        }
+
+        div[class*="wrap"] {        /*aici cu * selecteaza toate elementele care contin wrap*/
+            width: 400px;
+            height: 300px;
+            background-color: yellow;
+        }
+        
+        a[href^="http://www.google.com"] {      /* aici cu ^ ia tot ceea ce incepe cu sintagma http...*/
+            color: turquoise;
+        }
+
+        a[href$=".pdf"] {                       /* aici cu $ indica doar ceea ce se termina cu .pdf*/
+            color: violet;
+        }
+
+        .heading{
+            color:blue                       /*la h1 class, sunt trei clase: heading, animate, si fade. Daca selectez una dintre ele si pun conditia, imi afiseaza.*/
+        }
+        
+        a[title~="cora"]{                       /*toate linkurile pe care le conditionam dupa title si au continut exact cora sau sunt urmate de spatii goale, vom fii reusite.*/
+            color:coral;
+        }
+
+        a[title|="lora"] {                      /*aceeasi conditie de mai sus, doar ca este separat de o cratima "-" */ 
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="some-id" class="some-class"></div>
+    <a href="http://www.link-group.eu" target="_blank">Link Group</a>
+    <a href="http://www.link-group.eu/careers" target="self" title="Link Careers" >Link Careers</a> <br>
+    <a href="http://www.google.com">Google</a> 
+    <a href="http://www.google.com/careers">Google Careers</a>
+    <div class="wrap-01"></div>
+    <a href="demo.pdf" >PDF</a> <br>
+    <a href="demo.doc" >DOC</a> 
+    <h1 class="heading animate fade">This is document heading</h1>
+
+    <a href="http://www.link-group.eu" title="cora">Cora</a> <br>
+    <a href="http://www.link-group.eu/careers"  title="cora careers" >Cora careers</a> <br>
+    <a href="http://www.link-group.eu" title="lora-academy">Cora-academy</a> <br>
+
+</body>
+</html>

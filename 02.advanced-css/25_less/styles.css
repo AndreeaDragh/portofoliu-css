@@ -1,0 +1,66 @@
+@import "common.css";
+body {
+  font-family: sans-serif;
+  color: #84cfe6;
+}
+h1 {
+  color: blue;
+}
+.box {
+  width: 960px;
+  margin: 0 auto;
+}
+/*@min1280: (min-width: 1280px);
+.box1 {
+    @media @min1280 {
+        width: 1024px;
+   }
+}       */
+article h1 {
+  color: red;
+}
+article h2 {
+  color: yellow;
+}
+article p {
+  color: green;
+}
+.box2 {
+  width: 960px;
+}
+@media (min-width: 1280px) {
+  .box2 {
+    width: 800px;
+  }
+}
+.foo {
+  color: hotpink;
+}
+#text-1 {
+  color: hotpink;
+  font-size: 16px ;
+}
+#text-2 {
+  color: hotpink;
+  font-size: 18px;
+}
+/*
+#sizes() {
+    mobile: 320px;
+    tablet: 768px;
+    desktop: 1280px;
+}
+.box{
+    @media (min-width: #sizes[mobile]) {
+        width: 300px;
+    }
+}*/
+.box4 {
+  width: 600px / 960px * 100%;
+}
+/*nu merge, nu stiu de ce*/
+@media (min-width: sizes [mobile]) {
+  .box5 {
+    width: 300px;
+  }
+}

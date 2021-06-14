@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox container</title>
+    <style>
+       #flexbox1{
+            border: 1px solid black ;
+            display: flex;
+            flex-wrap: wrap;
+            height: 50vh;
+        } 
+        #flexbox1 div{
+            width: 80px;
+            height: 80px;
+            margin: 6px;
+            text-align: center;
+            line-height: 80px;
+        }
+        #box1{
+            background-color: gold;
+            order: 5;
+        }
+        #box2{
+            background-color: greenyellow;
+        }
+        #box3{
+            background-color: turquoise;
+            order:-1;
+        }
+        #box4{
+            background-color: rgb(255, 145, 0);
+        }
+        #box5{
+            background-color: rgb(150, 54, 121);
+        }
+        #box6{
+            background-color: rgb(161, 48, 48);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="flexbox1">
+        <div id="box1">A</div>
+        <div id="box2">B</div>
+        <div id="box3">C</div>
+        <div id="box4">D</div>
+        <div id="box5">E</div>
+        <div id="box6">F</div>
+    </div>
+    <p>Daca sterg din css width si height, atunci box-urile vor fi lungi si inguste fix cat marimea literelor.</p>
+    <p>Daca pun la una dintre #box flex-basis:5em de exemplu, va fi de 5 ori mai mare fata de celalalte</p>
+    </body>
+</html>

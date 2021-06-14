@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Structural pseudo-classes</title>
+    <style>
+        p:first-of-type{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Main heading</h1>   
+    <p>Paragraph 0. Not in a div.</p> 
+            <!-- este primul descendent al parintelui sau body -->
+    <div id="first-div" class="content">
+        <h2>Subheading</h2>
+        <p>Paragraph 1 in a div.</p>
+           <!-- este primul descendent al parintelui sau div first -->
+
+        <p>Paragraph 2 in a div.</p>
+        <div id="second-div">
+            <p>Paragraph 3 in the second div.</p>      
+            <!-- este primul descendent al parintelui sau div second -->
+        </div>
+        <p>Paragraph 4.Not in a div.</p>
+        <p>Paragraph 5.Not in a div.</p>
+
+    </div>
+</body>
+</html>

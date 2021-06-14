@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Example</title>
+    <style>
+        body{
+            margin: 0px;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        #main>p {
+            text-align: left;
+        }
+        #header, #aside-1 #aside-2, #main, #footer {
+            padding: 8px;
+        }
+        #wrapper{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        #header{
+            flex-basis: 100%;
+            background-color: rgb(33, 97, 97);
+        }
+        #main{
+            flex-basis: 0%;
+            flex-grow: 5;
+            background-color: rgb(145, 50, 50);
+        }
+        #footer{
+            flex-basis: 100%;
+            background-color: rgb(77, 45, 45);
+        }
+        #aside-1{
+            flex-grow: 1;
+            flex-basis: auto;
+            background-color: black;
+        }
+        #aside-2{
+            flex-grow: 1;
+            flex-basis: auto;
+            background-color: rgb(44, 29, 29);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <h2>Header</h2>
+        </header>
+        <aside class="aside" id="aside-1">
+            <h2>Aside 1</h2>
+        </aside>
+        <div id="main">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium varius varius. Duis volutpat elementum neque, sed congue neque luctus ut. Nunc ligula lacus, hendrerit eget urna finibus, tristique ullamcorper nulla. Pellentesque congue laoreet eros. Nunc sit amet ipsum id ex rhoncus ornare quis eu mi. Morbi ac finibus odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc mattis
+                tempus tempor. Etiam at neque sed nisl ornare semper pharetra non sapien. Praesent pellentesque, ipsum a fermentum fermentum, sapien dui pharetra felis, in dictum arcu urna in nibh. Aliquam pulvinar pellentesque nisl, pharetra ultricies mauris auctor vel. Aliquam erat volutpat. Vestibulum suscipit ut ligula finibus semper. In hac habitasse platea dictumst. Fusce ante nisi, auctor vel fermentum sed, tincidunt non ex.</p>
+        </div>
+        <aside class="aside" id="aside-2">
+            <h2>Aside 2</h2>
+        </aside>
+        <footer id="footer">
+            <h2>Footer</h2>
+        </footer>
+    </div>
+</body>
+</html>

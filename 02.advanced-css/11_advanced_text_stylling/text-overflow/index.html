@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text overflow</title>
+    <style>
+        .tile{
+            width: 280px;
+            border: 1px solid gainsboro;
+            box-shadow: 4px 4px 8px gainsboro;
+            border-radius: 8px;
+            overflow:hidden;
+        }
+        .tile-background{
+            height: 200px;
+            background-image: url(boat.jpg);
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size: cover;
+        }
+        .tile-text{
+            font-size: 20px;
+            margin: 16px 8px;
+            font-family: sans-serif;
+            text-overflow: ellipsis; /*e important ca sa apara ... daca e prea lung textul. nu merge fara conditia de mai jos cu hidden*/
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="tile">
+        <div class="tile-background"></div>
+        <div class="tile-text">Donaudamp­fschiffahrtsgesellschaftskapitän</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Items Aligment</title>
+    <style>
+        #grid-1{
+            display: grid;
+            grid-template-columns: 160px 160px 160px;
+            grid-auto-rows: minmax(100px, 150px);
+            gap: 16px;
+            height: 70vh;
+            border: 1px dashed;
+           /* align-items: center; /*pe axa block(verticala), afiseaza pe oriz. are valori start, end, center, stretch, normal*/
+           /* justify-items:normal;  /*pe axa inline(orizontala), afiseaza pe vert, are aceleasi valori ca la align-items*/
+            align-content: space-around;   /*la ambele si la align si la justify merg valorile: start, end, center, space-between, space-around, stretch*/
+            justify-content: space-around;
+        }
+
+
+        #grid-1>div{
+            background-color: palevioletred;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-1">
+        <div>One</div>
+        <div style="align-self: start;">Two</div> <!--merge si cu justify-self-->
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+    </div>
+</body>
+</html>

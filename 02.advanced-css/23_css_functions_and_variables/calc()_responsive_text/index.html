@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Text</title>
+    <style>
+        #main-container{
+            font-family: sans-serif;
+            max-width: 960px;
+            margin: 0 auto;
+            font-size: calc(13px + (21-13) * ((100vw - 320px)/ (1600 - 320)));
+        }
+        @media screen and (max-width:319px) {
+                #main-container{
+                    font-size:13px;
+                }
+            } 
+        @media screen and (min-width:1600px) {
+                #main-container{
+                    font-size:21px;
+                }
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="main-container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+    <h1>This is Heading 1</h1>
+    <h3>This is Heading 3</h3>
+    </div>  
+</body>
+</html>

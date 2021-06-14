@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes for HTML forms</title>
+    <style>
+#contact-wrapper{
+    width: 400px;
+    margin: 0 auto;
+}
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid gainsboro;
+    margin: 10px 0 10px 0;
+}
+input[type="text"]:hover{
+    border: solid 2px beige;
+}
+input[type="text"]:focus{
+    border: solid 2px black;
+}
+input[type="text"]:disabled{
+    background-color:  rgb(165, 157, 135);
+}
+input[type="submit"]{
+    padding: 10px;
+    border: 2px solid bisque;
+    background-color: blanchedalmond;
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="submit"]:hover {
+    border: solid 2px beige;
+    cursor: pointer;
+}
+input[type="submit"]:focus {
+    border: solid 2px black;
+}
+input[type="submit"]:active {
+    border: solid 2px turquoise;
+}
+input[type="checkbox"]:checked+label{   /*ca sa coloreze textul in momentul in care este bifat*/
+    color: blueviolet;
+}
+    </style>
+</head>
+<body>
+    <div id="contact-wrapper">
+        <form>
+            <input type="text" name="name" id="name" placeholder="NAME" autocomplete="off"> <br>
+            <input type="text" name="email" id="email" placeholder="E-MAIL" autocomplete="off"> <br>
+            <input disabled type="text" name="subject" id="subject" placeholder="SUBJECT(disabled)" autocomplete="off"> <br>
+            <input type="submit" name="submit" id="submit" value="SEND"><br>
+            <input type="checkbox" name="subcribe" id="subscribe">
+            <label for="subscribe">YES, I WANT TO RECEIVE INFORMATION ABOUT NEW PROJECTS</label>
+        </form> 
+    </div>
+</body>
+</html>

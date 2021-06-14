@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Gradients</title>
+    <style>
+.box{
+    width:400px;
+    height: 250px;
+    margin: 10px auto;
+    padding: 10px;
+}
+#box-1{
+    background: linear-gradient(transparent -80%, rgb(91, 83, 196) 80%), url(star.png);
+}
+#box-2{
+    background: linear-gradient(217deg, rgba(214, 95, 79, 0.8), rgba(214, 95, 79, 0) 70.71%),
+    linear-gradient(127deg, rgb(79, 186, 111, 0.8), rgb(79, 186, 111, 0) 70.71%), 
+    linear-gradient(336deg, rgb(81, 146, 210, 0.8), rgb(81, 146, 210, 0) 70.71%);
+}
+#box-3{
+    background: radial-gradient(circle, red, blue);
+}
+#box-4{
+    background: radial-gradient(farthest-corner at 100% 50%, red, blue);
+}
+#box-5{
+    background: conic-gradient(from 45deg at 20% 80%, red, blue);
+}
+#box-6{
+    background: repeating-linear-gradient(yellow 0px, purple 30px) /*merge si la radial si la conic*/
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+    <div class="box" id="box-4"></div>
+    <div class="box" id="box-5"></div>
+    <div class="box" id="box-6"></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Content - Images </title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+        #hero{
+            width: 600px;
+            height: 400px;
+            background-image: url("tokio-2048w.jpg"); 
+            background-size: contain; /*pot si cu cover, doar ca o va taia*/
+            background-repeat: no-repeat;
+        }
+        @media screen and (max-width:1024px){
+            #hero{
+                background-image: url("tokio-1024w.jpg")
+            }
+        }
+        @media screen and (max-width:768px) {
+            #hero{
+                background-image: url("tokio-768w.jpg");
+            }
+        }
+        @media screen and (max-width:414px) {
+            #hero{
+                background-image: url("tokio-414w.jpg");
+            }      
+        }
+        @media only screen and (min-resolution:3ddpx) and (max-width:414px) {
+            #hero{
+                background-image: url("tokio-414w@2.jpg");
+            }
+        }
+        @media only screen and (min-resolution:3dppx) and (max-width:414px) {
+            #hero{
+                background-image: url("tokio-414w@3.jpg");
+            }
+        }
+    </style>
+</head>
+<body> 
+  <!--<img src="tokio-768w.jpg" alt="Tokio Neon Lights" > --> 
+  <div id="hero"></div>
+</body>
+</html>

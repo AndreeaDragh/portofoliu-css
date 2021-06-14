@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Content - Images </title>
+    <style>
+        img{
+            width: 100%;
+            max-width: 500px;
+        }
+        
+    </style>
+</head>
+<body>                                      <!-- 414w de dupa sursa imaginii e o directiva care indica dimensiunea reala-->
+   <!-- <img srcset="tokio-414w.jpg 414w                    prima varianta
+                tokio-768w.jpg 768w,
+                tokio-1024w.jpg 1024w,
+                tokio-2048w.jpg 2048w" 
+         sizes="(max-width:414px) 414px,
+                        (max-width:768px) 768px,
+                        (max-width:1024px) 1024px,
+                        1028px, 
+         src="tokio-2048w.jpg" alt="Tokio Neon Lights"> -->
+     <!--    <img srcset="tokio-414w.jpg,                   a doua varianta
+                      tokio-828w.jpg 2x,
+                      tokio-1242w.jpg 3x"
+                src="tokio-828w.jpg" alt="Tokio Neon Lights" > -->
+    <picture>
+        <source srcset="tokio-414.jpg" media="(max-width:414px)">
+        <source srcset="tokio-768.jpg" media="(max-width:768px)">
+        <source srcset="tokio-1024.jpg" media="(max-width:1024px)">
+        <source srcset="tokio-2048.jpg" media="(max-width:2048px)">
+        <img src="tokio-1024w.jpg">
+
+    </picture>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Configurations 2</title>
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+        #grid-1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        #box-1{
+          width: 160px;
+          height: 120px;
+          background-color: plum;
+          color: white;
+          text-align: center;
+          line-height: 120px;
+          grid-column: 2/3;
+          grid-row: 2/3;
+          /*grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3; ---> mai detaliat, exact ca grid-column/grid-row*/
+        }
+        #grid-2{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+        #box-2{
+          width: 160px;
+          height: 120px;
+          background-color: rgb(160, 221, 183);
+          color: black;
+          text-align: center;
+          line-height: 120px;
+          grid-area: 1/1/3/4;
+         /* grid-column: 1/4;
+          grid-row: 1/3; --> mai detaliat, exact ca grid-area*/
+          /*daca sterg latimea de 160px, se duce pe tot campul vizual*/
+        }
+        #grid-3{
+            display: grid;
+            grid-template-columns: repeat(3, 160px);
+            column-gap: 16px;
+            row-gap: 8px;
+            grid-template-rows: 160px 160px;
+            grid-template-areas: 
+            "a a ."
+            ". b b";
+        }
+        #box-3{
+          height: 160px;
+          background-color: rgb(114, 187, 53);
+          color: black;
+          text-align: center;
+          line-height: 160px;
+          grid-area: a;
+        }
+        #box-4{
+          height: 160px;
+          background-color: rgb(161, 163, 49);
+          color: black;
+          text-align: center;
+          line-height: 160px;
+          grid-area: b;
+        }
+    </style>
+</head>
+<body>
+  <div id="grid-1">
+    <div id="box-1">One</div>
+  </div>  
+  <p>Area:</p>
+  <div id="grid-2">
+    <div id="box-2">Two</div>
+  </div>  
+  <p> Acum codez cum pot introduce 2 area:</p>
+  <div id="grid-3">
+      <div id="box-3">Area-1</div>
+      <div id="box-4">Area-2</div>
+  </div>  
+</body>
+</html>
